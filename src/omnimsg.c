@@ -83,7 +83,21 @@ static void tiny_sleep_ms(int ms) {
 
 /* ---------------- usage ---------------- */
 
+
+static const char *prog_basename(const char *argv0) {
+  /* Extract filename from argv[0] which may be a full path.
+     Handles '/', '\', and drive separators like 'A:'. */
+  const char *base = argv0 ? argv0 : "omnimsg";
+  for (const char *p = base; p && *p; ++p) {
+    if (*p == '/' || *p == '\\' || *p == ':') {
+      base = p + 1;
+    }
+  }
+  return (base && *base) ? base : "omnimsg";
+}
+
 static void usage(const char *prog) {
+  const char *app = prog_basename(prog);
   fprintf(stderr,
     "Omni Messenger (omnimsg) - minimal serverless LAN chat\n\n"
     "Usage: %s [options]\n\n"
@@ -93,7 +107,7 @@ static void usage(const char *prog) {
     "  --broadcast <ip>     broadcast IP (default: 255.255.255.255)\n"
     "  --send <text>        send one message and exit\n"
     "  --help               show this help\n",
-    prog);
+    app);
 }
 
 static int parse_ipv4(const char *s, uint32_t *out_addr_be) {

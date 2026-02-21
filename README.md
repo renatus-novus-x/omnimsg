@@ -16,15 +16,6 @@ Stage 1 (this repo):
       * macOS / Linux
       * X68000 (elf2x68k + libsocket, Human68k)
 
-Build
------
-Windows / macOS / Linux:
-  cmake -S . -B build
-  cmake --build build
-
-X68000 (elf2x68k):
-  make -f Makefile.x68k
-
 Usage
 -----
 Interactive chat:
@@ -40,6 +31,22 @@ Options:
   --broadcast <ip>     broadcast address (default: 255.255.255.255)
   --send <text>        send one message and exit
   --help               show help
+
+Download
+--------
+- [omnimsg.exe (windows)](https://raw.githubusercontent.com/renatus-novus-x/omnimsg/main/bin/omnimsg.exe)
+- [omnimsg (macos)](https://raw.githubusercontent.com/renatus-novus-x/omnimsg/main/bin/omnimsg)
+- [omnimsg (ubuntu)](https://raw.githubusercontent.com/renatus-novus-x/omnimsg/main/bin/omnimsg)
+- [omnimsg.x (x68000)](https://raw.githubusercontent.com/renatus-novus-x/omnimsg/main/bin/omnimsg.x)
+
+Build
+-----
+Windows / macOS / Linux:
+  cmake -S . -B build
+  cmake --build build
+
+X68000 (elf2x68k):
+  make
 
 Notes (X68000)
 --------------
