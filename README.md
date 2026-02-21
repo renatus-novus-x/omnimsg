@@ -2,7 +2,7 @@
 [![macos](https://github.com/renatus-novus-x/omnimsg/workflows/macos/badge.svg)](https://github.com/renatus-novus-x/omnimsg/actions?query=workflow%3Amacos)
 [![ubuntu](https://github.com/renatus-novus-x/omnimsg/workflows/ubuntu/badge.svg)](https://github.com/renatus-novus-x/omnimsg/actions?query=workflow%3Aubuntu)
 
-omnimsg_min
+Omni Messenger
 ===========
 
 Omni Messenger (omnimsg): a minimal, serverless, cross-platform LAN messenger.
