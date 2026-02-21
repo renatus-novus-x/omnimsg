@@ -19,19 +19,22 @@ Stage 1 (this repo):
 Usage
 -----
 Interactive chat:
+```bash
   omnimsg --nick Alice --broadcast 192.168.0.255
   omnimsg --nick Bob   --broadcast 192.168.0.255
-
+```
 Send one message and exit:
+```bash
   omnimsg --nick Alice --broadcast 192.168.0.255 --send "hello"
-
+```
 Options:
+```bash
   --nick <name>        nickname (default: anon)
   --port <port>        UDP port (default: 24250)
   --broadcast <ip>     broadcast address (default: 255.255.255.255)
   --send <text>        send one message and exit
   --help               show help
-
+```
 Download
 --------
 - [omnimsg.exe (windows)](https://raw.githubusercontent.com/renatus-novus-x/omnimsg/main/bin/omnimsg.exe)
@@ -42,12 +45,14 @@ Download
 Build
 -----
 Windows / macOS / Linux:
+```bash
   cmake -S . -B build
   cmake --build build
-
+```
 X68000 (elf2x68k):
+```bash
   make
-
+```
 Notes (X68000)
 --------------
 - poll() is planned but not yet available. Receive is implemented as non-blocking by
